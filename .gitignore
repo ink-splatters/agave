@@ -1,5 +1,5 @@
 farf/
-target/
+target
 /solana-release/
 /solana-release.tar.bz2
 /solana-metrics/
@@ -41,3 +41,8 @@ log-*/
 
 # download-test-vectors.sh artifacts
 /fd-vectors/
+# nix
+
+/.direnv
+/.pre-commit-config.yaml
+/result
