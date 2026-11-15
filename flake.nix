@@ -2,7 +2,10 @@
   inputs = {
     crane.url = "github:ipetkov/crane";
     fenix = {
-      url = "github:nix-community/fenix/monthly";
+      # Track the rolling toolchain instead of the monthly pin: fenix's
+      # 2026-11-01 monthly picks up Rust nightly 2026-11-01, whose async-drop
+      # cycle regression breaks `solana-cli` (rust-lang/rust#165263).
+      url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.rust-analyzer-src.follows = "";
     };
